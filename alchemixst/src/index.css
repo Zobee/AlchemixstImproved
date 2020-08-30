@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto");
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: darkgray;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.shutter{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all 0.5s ease-out;
+  font-weight: 800;
+  font-size: 5rem;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.shutter-top{
+  height: 50vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  align-items: flex-end;
+  top: 0;
+}
+
+.shutter-bottom{
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  align-items: flex-start;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.shutter-bubble-1{
+  position: absolute;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 50%;
+  opacity: 25%;
+  top: 0;
+  left: 1rem;
+}
+
+.shutter-bubble-2{
+  position: absolute;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  opacity: 20%;
+  top: 2rem;
+  right: 5rem;
+}
+
+.shutter-close-top{
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
+.shutter-close-bottom{
+  transform: translateY(100%);
+  overflow: hidden;
+}
+
+.shutter-close-top::after{
+  display: none;
+}
+.shutter-close-bottom::after{
+  display: none;
+}
+
+/*Header*/
+.navbar{  
+  width: 100%;
+  background-color: #121214;
+}
+
+.navbar-nav{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  justify-content: space-around;
+}
+
+.navbar-brand{
+  justify-self: start;
+  margin-left: 1rem;
+}
+
+.navbar-brand a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+.navbar-nav-links{
+  flex: 1;
+}
+.navbar-nav-links ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav-links li{
+  padding: 0 0.5rem;
+  margin: 1rem 0.5rem;
+}
+
+.navbar-nav-links a{
+  color: #FFF;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin: 0.5rem
+}
+
+.navbar-nav-links a:hover{
+  color: #CCC;
+}
+
+.space{
+  flex: 1;
+}
+
+/*Toggle Button*/
+.toggle-btn{
+  height: 0.8rem;
+  width: 1.15rem;
+  background: transparent;
+  border: none;
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.toggle-btn:focus{
+  outline: none;
+}
+
+.toggle-btn-line{
+  background-color: white;
+  height: 0.08rem;
+  width: 1.15rem;
+}
+
+.dropdown{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121318;
+  margin-top: 0;
+  transform: translateY(-150%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  position: fixed;
+  box-shadow: 0 6px 4px -4px #070708;
+  max-width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.dropdown li{
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
+  margin: 4vh auto;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  transition: all 0.4s ease;
+}
+
+.dropdown li a:hover, .dropdown li a:active{
+  color: rgb(49, 170, 55);
+  font-size: 3rem;
+}
+
+.dropdown.open{
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/*HOME PAGE*/
+
+.main button{
+  position: absolute;
+}
+
+.main-header{
+  display: flex;
+  background-color: #121214;
+  background: linear-gradient(45deg, #121214, #454547, #3c7e16);
+  color: white;
+  align-items: center;
+  padding: 2.5rem 0;
+  box-shadow: 0 12px 6px 8px #070708;
+  box-shadow: none;
+  max-width: 100%;
+  height: 50vh;
+}
+
+.main-header div{
+  margin: auto;
+  position: relative;
+}
+
+.main-header h1{
+  font-size: 10rem;
+  letter-spacing: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  margin: 0;
+}
+
+.main-header h2{
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  margin: 0;
+}
+
+.main-header h1 span{
+  font-size: 16rem;
+  color: #42b625;
+  animation: bounce 0.5s infinite;
+  /*transform: skewX(-10deg);*/
+}
+
+.raise{
+  transform: translateY(-30%);
+}
+
+.main-header img{
+  height: 40vh;
+  width: 40vh;
+  border-radius: 50%;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+
+.rotate{
+  animation: rotate 12s infinite linear, pulse 10s linear infinite;
+}
+
+.fade{
+  animation: fadeIn 2s ease;
+}
+
+.tab-open{
+  flex: 1;
+  width: 100%;
+  border: solid 2px palegoldenrod;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.freq-container{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: auto;
+}
+
+.freq{
+  height: 4vh;
+  width: 1vh;
+  background-color: yellow;
+  top: 50%;
+  padding: 3vh 0;
+  margin: 0;
+}
+
+.freq1{
+  background-color: red;
+  animation: pop 0.7s linear infinite;
+}
+.freq2{
+  background-color: yellow;
+  animation: pop 0.5s linear infinite;
+}
+.freq3{
+  background-color: orange;
+  animation: pop 1.2s linear infinite;
+}
+.freq4{
+  background-color: turquoise;
+  animation: pop 1.5s linear infinite;
+}
+.freq5{
+  background-color: blue;
+  animation: pop 0.5s linear infinite;
+}
+.freq6{
+  background-color: cornflowerblue;
+  animation: pop 0.8s linear infinite;
+}
+
+.home-content h1{
+  font-size: 6rem;
+  font-weight: 800;
+  text-align: center;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 3px 3px 3px gray;
+  margin: 2rem auto 0;
+}
+
+.newest-release{
+  height: 20vh;
+  width: 20vh;
+  border: solid 1px red;
+}
+
+.socials{
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: solid 1px red;
+}
+
+.socials h5{
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.icon{
+  margin: auto 0.8rem;
+  transition: all 0.4s ease-in;
+}
+
+.icon:hover, .icon:focus, .icon:active{
+  animation: bounce 0.4s ease;
+  cursor: pointer;
+  font-size: 4.2rem;
+  color: rgb(154, 94, 223);
+}
+
+.unhidden{
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear;
+  transform: scaleX(0.2);
+}
+
+.test-enter {
+  opacity: 0;
+  transform: translateX(-30rem)
+}
+.test-enter-active {
+  opacity: 1;
+  transition: all 0.2s linear;
+  transform: translateX(0);
+}
+.test-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.test-exit-active {
+  opacity: 0;
+  transform: translateX(-30rem);
+  transition: all 0.2s linear;
+}
+
+.test2-enter {
+  opacity: 0;
+  transform: translateX(30rem)
+}
+.test2-enter-active {
+  opacity: 1;
+  transition: all 0.2s linear;
+  transform: translateX(0);
+}
+.test2-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.test2-exit-active {
+  opacity: 0;
+  transform: translateX(30rem);
+  transition: all 0.2s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes pulse {
+  0%
+  {
+    transform: scale(0.9) rotate(0deg);
+  }
+  20%
+  {
+    transform: scale(1) rotate(80deg);
+  }
+  40%
+  {
+    transform: scale(0.9) rotate(160deg);
+  }
+  60%
+  {
+    transform: scale(1) rotate(240deg);
+  }
+  100%
+  {
+    transform: scale(0.9) rotate(364deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  } 
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes pop {
+  from {
+    transform: scaleY(1.8);
+  } to {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes bounce{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-0.2rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .navbar{
+    width: 100vw;
+  }
+  .shutter{
+    font-size: 3.5rem;
+  }
+  .navbar-nav-links{
+    display: none;
+  }
+
+  .toggle-btn{
+    display: flex;
+    cursor: pointer;
+  }
+
+  /*MAIN PAGE*/
+  .main-header{
+    max-width: 100vw;
+  }
+  .main-header div h1{
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+  }
+
+  .main-header div h1 span{
+    font-size: 3rem;
+  }
+
+  .main-header img{
+    display: none;
+  }
+}
