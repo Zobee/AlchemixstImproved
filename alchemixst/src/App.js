@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Switch, Route, useLocation} from 'react-router-dom'
-import Main from './components/Main'
+import Main from './components/Main/Main'
 import Header from './components/Header/Header'
 import Store from './components/Store/Store'
-import Beats from './components/Beats'
 import DrumPad from './components/DrumPad/DrumPad'
 import Shutters from './components/Shutters'
 
@@ -23,7 +22,6 @@ const App = () => {
         <Route exact path="/"component={Main}/>
         <Route path='/pad' component={DrumPad}/>
         <Route path='/store' component={Store}/>
-        <Route path='/beats' component={Beats}/>
       </Switch>
       {!doneAnim &&
       <Shutters setDoneAnim={setDoneAnim} />

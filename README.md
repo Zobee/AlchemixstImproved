@@ -37,3 +37,20 @@ TODO: This is where the backend is going to come into play
 TODO: I already know that my biggest issue is gonna be making this mobile responsive
 
 ------BACKEND------
+
+
+V 0.0.1
+
+Unrelated, but I should learn git before my next commit
+
+Lots of refactoring. It does take some time, but I can see the benefits of cleaning up code this way. It also makes it way easier to pinpoint problems, since I can just isolate the problematic ass component. More importantly, things seem way less overwhelming now.
+
+I should probably do the same with the css file. Having it all condensed is getting kind of annoying.
+
+Button adjustments. Main style, and colors to match the services
+
+Removed beats since it would be redundant.
+
+Scaffolded the drumpad page. Seriously, splitting everything up like this makes things way easier to work with. There's a chance I'll need to use context if things get to layered, but I'll cross that bridge when I get there.
+
+I've got the pads working. The issue is that I've set up each pad with state. It's probably not the best idea to have 16 event-listeners get created every time a key is pressed.
