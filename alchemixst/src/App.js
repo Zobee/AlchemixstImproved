@@ -8,6 +8,7 @@ import Shutters from './components/Shutters'
 
 
 const App = () => {
+  const [animationEnd, setAnimationEnd] = useState(false)
   return (
     <div className="app">
       <Header/>
@@ -16,7 +17,7 @@ const App = () => {
         <Route path='/pad' component={DrumPad}/>
         <Route path='/store' component={Store}/>
       </Switch>
-      <Shutters shutterTextTop={"Dough"} shutterTextBottom={"Joe"}/>
+      {!animationEnd && <Shutters setAnimationEnd={setAnimationEnd} shutterTextTop={"Dough"} shutterTextBottom={"Joe"}/>}
     </div>
   );
 }

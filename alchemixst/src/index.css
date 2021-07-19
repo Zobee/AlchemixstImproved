@@ -538,7 +538,7 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  
+  transition: all 0.25s ease;
 }
 
 .pad1{
@@ -605,8 +605,8 @@ body{
   background-color: rgb(199, 32, 32);
 }
 
-.down{
-  background-color: blueviolet;
+.pad.down{
+  transform: translateY(0.2em);
 }
 
 .pad-controls{

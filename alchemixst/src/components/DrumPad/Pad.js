@@ -22,12 +22,10 @@ function Pad({isOn, pad}) {
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
-    
     return () => {
         document.removeEventListener('keydown', keyPress)
     }
-
-    }, [keyPress])
+    },[keyPress])
     return (
         <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`}>
             <p>{keyInput}</p>

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { getRandomColor } from '../helpers'
 
-const Shutters = ({shutterTextTop, shutterTextBottom}) => {
+const Shutters = ({setAnimationEnd, shutterTextTop, shutterTextBottom}) => {
     const [transitionBg, setTransitionBg] = useState('')
     const [transitionText, setTransitionText] = useState("")
     const [isShutTop, setIsShutTop] = useState("")
@@ -21,7 +21,8 @@ const Shutters = ({shutterTextTop, shutterTextBottom}) => {
         setTransitionBg(bg)
         setTransitionText(text)
         setTimeout(toggleShut, 300)
-    },[])
+        setTimeout(() => setAnimationEnd(true), 800)
+    },[setAnimationEnd])
     return (
         <div>
       		<div className={`shutter shutter-top ${isShutTop}`}

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 import MainBtn from './MainBtn'
 import MainHeader from './MainHeader'
-import PanelContainer from './PanelContainer'
+//import PanelContainer from './PanelContainer'
 import MainAbout from './MainAbout'
 
 function Main() {
