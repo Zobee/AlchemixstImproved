@@ -1,31 +1,30 @@
 import React, {useState, useEffect, useCallback} from 'react'
 
 function Pad({isOn, pad}) {
-    const {id,keyInput,beatName, sound} = pad
-    const [isDown, setIsDown] = useState("")
+    const {id, keyInput, beatName, sound} = pad;
+    const [isDown, setIsDown] = useState("");
 
     const play = (aud) => {
         setIsDown("down")
         const playback = new Audio(aud)
         playback.currentTime = 0
-        playback.volume = 1 //volume
+        playback.volume = 1
         playback.play();
         playback.remove();
         setTimeout(() => setIsDown(""), 250)
     }    
 
     const keyPress = useCallback((e) => {
-        if(isOn){
-            if(e.key.toUpperCase() === keyInput){
-                play(sound)
-            }
+        if(isOn && e.key.toUpperCase() === keyInput){
+            play(sound)
         } 
     })
+
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
     
     return () => {
-        document.removeEventListener('keydown',keyPress)
+        document.removeEventListener('keydown', keyPress)
     }
 
     }, [keyPress])
