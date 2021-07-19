@@ -16,7 +16,7 @@ function Main() {
                     <MainAbout currTab={currTab} />
                 </div>
             </div>
-            <PanelContainer/>
+            {/*<PanelContainer/>*/}
         </div>
     )
 }

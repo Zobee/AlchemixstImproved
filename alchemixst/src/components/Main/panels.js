@@ -1,19 +1,27 @@
 const panels = [
     {
         id: 1,
-        name: "Counterpoise"
+        name: "Counterpoise",
+        soundcloud: "",
+        youtube: ""
     },
     {
         id: 2,
-        name: "Some"
+        name: "Some",
+        soundcloud: "",
+        youtube: ""
     },
     {
         id: 3,
-        name: "Grass"
+        name: "Grass",
+        soundcloud: "",
+        youtube: ""
     },
     {
         id: 4,
-        name: "You For Rea"
+        name: "You For Rea",
+        soundcloud: "",
+        youtube: ""
     }
 ]
 

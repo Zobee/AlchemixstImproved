@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Switch, Route, useLocation} from 'react-router-dom'
+import React, {useState} from 'react';
+import {Switch, Route} from 'react-router-dom'
 import Main from './components/Main/Main'
 import Header from './components/Header/Header'
 import Store from './components/Store/Store'

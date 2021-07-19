@@ -15,11 +15,8 @@ function Header() {
         <div>
         <header className='navbar'>
             <nav className='navbar-nav'>
-                <div>
-                    <ToggleButton setToggleDropdown={setToggleDropdown}/>
-                </div>
                 <div className='navbar-brand'>
-                    <Link to='/'>ALCHEMIXST</Link>
+                    <Link to='/'>DOUGH JOE</Link>
                 </div>
                 <div className='space'></div>
                 <div className='navbar-nav-links'>
@@ -28,6 +25,9 @@ function Header() {
                         {/* <li><Link to='/beats'>Beats</Link></li> */}
                         <li><Link to='/store'>Merch</Link></li>
                     </ul>
+                </div>
+                <div>
+                    <ToggleButton setToggleDropdown={setToggleDropdown}/>
                 </div>
             </nav>
         </header>
