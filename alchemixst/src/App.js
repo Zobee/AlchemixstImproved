@@ -8,13 +8,6 @@ import Shutters from './components/Shutters'
 
 
 const App = () => {
-  const [doneAnim, setDoneAnim] = useState(false)
-
-  //Reset shutters on page transition
-  // let location = useLocation()
-  // useEffect(() => {
-  //   setDoneAnim(false)
-  // },[location])
   return (
     <div className="app">
       <Header/>
@@ -23,9 +16,7 @@ const App = () => {
         <Route path='/pad' component={DrumPad}/>
         <Route path='/store' component={Store}/>
       </Switch>
-      {!doneAnim &&
-      <Shutters setDoneAnim={setDoneAnim} />
-      }
+      <Shutters shutterTextTop={"Dough"} shutterTextBottom={"Joe"}/>
     </div>
   );
 }

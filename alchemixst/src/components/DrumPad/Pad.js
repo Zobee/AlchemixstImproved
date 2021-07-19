@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Pad({isOn, pad}) {
     const {id, keyInput, beatName, sound} = pad;
@@ -14,11 +14,11 @@ function Pad({isOn, pad}) {
         setTimeout(() => setIsDown(""), 250)
     }    
 
-    const keyPress = useCallback((e) => {
+    const keyPress = (e) => {
         if(isOn && e.key.toUpperCase() === keyInput){
             play(sound)
         } 
-    })
+    }
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)

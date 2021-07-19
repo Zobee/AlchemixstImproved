@@ -12,7 +12,7 @@ function MainHeader({currTab}) {
                 classNames='test'>
                 <div className={`main-header`}>
                 <div className={`header-brand`}>
-                    <h1 className={raise}><span>D</span>OUGH <span>J</span>OE</h1>
+                    <h1 className={raise}><span>D</span>OUGH<span>J</span>OE</h1>
                     {raise ? 
                     <div className={`freq-container raise fade`}>
                                 <div className='freq freq1'>
@@ -31,7 +31,7 @@ function MainHeader({currTab}) {
                                 </div>
                                 <div className='freq freq8'>
                                 </div>
-                            </div> : <h2></h2>}
+                            </div> : <h2>Subtitle</h2>}
                 </div>
                 <img 
                 className={`${rotate && "rotate"}`} 
