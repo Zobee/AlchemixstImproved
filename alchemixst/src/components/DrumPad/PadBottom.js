@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PadBottom({padActive}) {
+function PadBottom({activePad}) {
     return (
         <div>
             Pad Footer
