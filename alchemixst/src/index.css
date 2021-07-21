@@ -607,6 +607,8 @@ body{
 
 .pad.down{
   transform: translateY(0.2em);
+  background-color: #FF5555;
+  background-blend-mode: lighten;
 }
 
 .pad-controls{
@@ -718,3 +720,5 @@ body{
     display: none;
   }
 }
+
+/* PAD CONTROL PANEL*/
