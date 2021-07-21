@@ -7,14 +7,15 @@ import PadBottom from './PadBottom'
 function DrumPad() {
     const [isOn, setIsOn] = useState(false)
     const [mute, setMute] = useState(false)
+    const [activePad, setActivePad] = useState(null)
     return (
         <div className='drumpad'>
-            <PadHeader/>
+            <PadHeader activePad={activePad}/>
             <div className='pad-container'>
-                <PadDeck isOn={isOn} mute={mute}/>
+                <PadDeck isOn={isOn} mute={mute} setActivePad={setActivePad}/>
                 <PadControls setIsOn={setIsOn} setMute={setMute}/>
             </div>
-            <PadBottom/>
+            <PadBottom activePad={activePad}/>
         </div>
     )
 }

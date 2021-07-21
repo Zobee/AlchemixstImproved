@@ -72,25 +72,25 @@ const padData = [
         sound: 'sounds/cymbal.wav'
     },
     {
-        id: 12, 
+        id: 13, 
         keyInput: 'Z', 
         beatName:'Crash', 
         sound: 'sounds/cymbal.wav'
     },
     {
-        id: 12, 
+        id: 14, 
         keyInput: 'X', 
         beatName:'Crash', 
         sound: 'sounds/cymbal.wav'
     },
     {
-        id: 12, 
+        id: 15, 
         keyInput: 'C', 
         beatName:'Crash', 
         sound: 'sounds/cymbal.wav'
     },
     {
-        id: 12, 
+        id: 16, 
         keyInput: 'V', 
         beatName:'Crash', 
         sound: 'sounds/cymbal.wav'

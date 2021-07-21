@@ -20,6 +20,14 @@ function PadControls({setIsOn, setMute}) {
                 name='mute'
                 onChange={() => setMute(prev => !prev)}
             />
+            <label for='sound-bank'>
+                Bank: A
+            </label>
+            <input 
+                type='checkbox'
+                name='sound-bank'
+                onChange={() => console.log("Switch")}
+            />
         </div>   
     )
 }

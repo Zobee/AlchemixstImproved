@@ -1,9 +1,9 @@
 import React from 'react'
 
-function PadHeader() {
+function PadHeader({activePad}) {
     return (
         <div className='pad-header'>
-            header
+            {activePad ? activePad.beatName : "Make Some Noise"}
         </div>
     )
 }
