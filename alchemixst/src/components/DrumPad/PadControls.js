@@ -3,7 +3,7 @@ import React from 'react'
 function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
     return (
         <div className='pad-controls'>
-            <div className={`beat-name`}>
+            <div className={`beat-name ${isOn ? "beat-name-active" : ""}`}>
                 {activePadName && <h1>{activePadName}</h1>}
             </div>
             <h1>PAD CONTROLS</h1>
@@ -22,7 +22,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 type='checkbox'
                 name='mute'
                 disabled={!isOn}
-                onChange={() => setVolume(prev => prev ? 0 : 100)}
+                onChange={(e) => setVolume(e.target.checked ? 0 : 100)}
             />
             <label for='sound-volume'>
                 Volume
