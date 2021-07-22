@@ -15,7 +15,7 @@ function Pad({isOn, pad, mute, setActivePad}) {
         setTimeout(() => {
             setIsDown("")
             setActivePad(null)
-        }, 250)
+        }, 300)
     }    
 
     const keyPress = (e) => {

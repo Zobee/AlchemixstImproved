@@ -1,8 +1,11 @@
 import React from 'react'
 
-function PadControls({setIsOn, setMute}) {
+function PadControls({activePad, setIsOn, setMute}) {
     return (
         <div className='pad-controls'>
+            <div className='beat-name'>
+                {activePad && <h1>{activePad.beatName}</h1>}
+            </div>
             <h1>PAD CONTROLS</h1>
             <label for='power'>
                 POWER

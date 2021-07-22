@@ -13,7 +13,7 @@ function DrumPad() {
         <PadHeader activePad={activePad}/>
         <div className='pad-container'>
             <PadDeck isOn={isOn} mute={mute} setActivePad={setActivePad}/>
-            <PadControls setIsOn={setIsOn} setMute={setMute}/>
+            <PadControls activePad={activePad} setIsOn={setIsOn} setMute={setMute}/>
         </div>
         <PadBottom activePad={activePad}/>
     </div>

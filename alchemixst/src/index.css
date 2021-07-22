@@ -7,7 +7,7 @@ body{
   font-family: 'Poppins', sans-serif;
   background-color: darkgray;
   background-color: #222;
-  color: #FAF;
+  color: #EEE;
   height: 100vh;
   overflow-x: hidden;
 }
@@ -525,24 +525,31 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex: 1;
 }
 
 .pad{
-  border: solid 1px red;
+  border: solid 1px black;
   flex: 0 24%;
   height: 15vh;
   width: 15vh;
-  margin-bottom: 1.5%;
+  margin-bottom: 0.3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   transition: all 0.25s ease;
+  box-shadow: #444 0.1em 0.15em;
+}
+
+.pad p{
+  margin: 0;
+  padding: 0;
 }
 
 .pad1{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(90, 7, 90);
 }
 
 .pad2{
@@ -554,67 +561,80 @@ body{
 }
 
 .pad4{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(90, 7, 90);
 }
 
 .pad5{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(85, 13, 153);
 }
 
 .pad6{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(204, 102, 19);
 }
 
 .pad7{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(204, 102, 19);
 }
 
 .pad8{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(85, 13, 153);
 }
 
 .pad9{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(20, 78, 153);
 }
 
 .pad10{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(228, 213, 0);
 }
 
 .pad11{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(228, 213, 0);
 }
 
 .pad12{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(20, 78, 153);
 }
 
 .pad13{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(17, 151, 175);
 }
 
 .pad14{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(36, 126, 9);
 }
 
 .pad15{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(36, 126, 9);
 }
 
 .pad16{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(17, 151, 175);
 }
 
 .pad.down{
   transform: translateY(0.2em);
-  background-color: #FF5555;
-  background-blend-mode: lighten;
+  filter: brightness(150%);
+  box-shadow: #222 0.05em 0.02em;
 }
 
 .pad-controls{
-  border: solid 1px black;
-  width: 90%;
+  background-color: #333;
+  flex: 0.5;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pad-controls .beat-name{
+  margin-top: 1rem;
+  height: 4rem;
+  width: 15rem;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes rotate {

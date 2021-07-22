@@ -8,13 +8,13 @@ const padData = [
     {
         id: 2, 
         keyInput: '2', 
-        beatName:'Percussion 1', 
+        beatName:'Snap', 
         sound: 'sounds/percussion.wav'
     },
     {
         id: 3, 
         keyInput: '3', 
-        beatName:'Percussion 2', 
+        beatName:'Tom Tom', 
         sound: 'sounds/percussion2.wav'
     },
     {
