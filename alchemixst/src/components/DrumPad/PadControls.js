@@ -23,14 +23,6 @@ function PadControls({activePad, setIsOn, volume, setVolume}) {
                 name='mute'
                 onChange={() => setVolume(prev => prev ? 0 : 100)}
             />
-            <label for='sound-bank'>
-                Bank: A
-            </label>
-            <input 
-                type='checkbox'
-                name='sound-bank'
-                onChange={() => console.log("Switch")}
-            />
             <label for='sound-volume'>
                 Volume
             </label>
