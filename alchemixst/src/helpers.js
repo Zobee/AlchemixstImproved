@@ -11,3 +11,11 @@ export const getRandomColor = () => {
     text: textColor,
   }
 }
+
+export const playSound = (audio, volume) => {
+  const playback = new Audio(audio)
+  playback.currentTime = 0
+  playback.volume = volume / 100
+  playback.play();
+  playback.remove();
+}
