@@ -541,6 +541,7 @@ body{
   font-size: 2rem;
   transition: all 0.25s ease;
   box-shadow: #444 0.1em 0.15em;
+  cursor: pointer;
 }
 
 .pad p{

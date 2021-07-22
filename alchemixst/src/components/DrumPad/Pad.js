@@ -31,7 +31,7 @@ function Pad({isOn, pad, mute, setActivePad}) {
     }
     },[keyPress])
     return (
-        <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`}>
+        <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`} onClick={() => play(sound)}>
             <p>{keyInput}</p>
             <p>{beatName}</p>
         </div>
