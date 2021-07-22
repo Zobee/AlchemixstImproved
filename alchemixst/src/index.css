@@ -715,7 +715,7 @@ body{
   }
 }
 
-@media only screen and (max-width: 768px){
+@media screen and (max-width: 768px){
   .navbar{
     width: 100vw;
   }
@@ -747,6 +747,41 @@ body{
   .main-header img{
     display: none;
   }
+
+  .pad-container {
+    flex-direction: column;
+  }
+
 }
 
-/* PAD CONTROL PANEL*/
+@media screen and (max-width: 400px) {
+  .pad-header{
+    font-size: 0.5em
+  }
+  .pad-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pad-deck{
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .pad {
+    height: 5vh;
+    width: 5vh;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .pad.down{
+    transform: translateY(0.02em);
+    box-shadow: none;
+  }
+
+  .pad p{
+    font-size: 0.3em;
+  }
+}
