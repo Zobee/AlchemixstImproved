@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-function Pad({isOn, pad, mute, setActivePad}) {
+function Pad({isOn, pad, setActivePad, volume}) {
     const {id, keyInput, beatName, sound} = pad;
     const [isDown, setIsDown] = useState("");
 
@@ -9,7 +9,7 @@ function Pad({isOn, pad, mute, setActivePad}) {
         setActivePad(pad)
         const playback = new Audio(aud)
         playback.currentTime = 0
-        playback.volume = mute ? 0 : 1
+        playback.volume = volume / 100
         playback.play();
         playback.remove();
         setTimeout(() => {

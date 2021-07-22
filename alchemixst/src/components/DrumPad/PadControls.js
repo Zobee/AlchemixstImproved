@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PadControls({activePad, setIsOn, setMute}) {
+function PadControls({activePad, setIsOn, volume, setVolume}) {
     return (
         <div className='pad-controls'>
             <div className='beat-name'>
@@ -21,7 +21,7 @@ function PadControls({activePad, setIsOn, setMute}) {
             <input
                 type='checkbox'
                 name='mute'
-                onChange={() => setMute(prev => !prev)}
+                onChange={() => setVolume(prev => prev ? 0 : 100)}
             />
             <label for='sound-bank'>
                 Bank: A
@@ -31,6 +31,18 @@ function PadControls({activePad, setIsOn, setMute}) {
                 name='sound-bank'
                 onChange={() => console.log("Switch")}
             />
+            <label for='sound-volume'>
+                Volume
+            </label>
+            <input
+                type='range'
+                name='sound-volume'
+                min="0"
+                max="100"
+                value={volume}
+                onChange={(e) => setVolume(e.target.value)}
+                />
+            <p>{volume}</p>
         </div>   
     )
 }
