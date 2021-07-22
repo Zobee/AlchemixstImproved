@@ -21,6 +21,7 @@ function Header() {
                 <div className='space'></div>
                 <div className='navbar-nav-links'>
                     <ul>
+                        <li><Link to='/'>Home</Link></li>
                         <li><Link to='/pad'>Drum Pad</Link></li>
                         {/* <li><Link to='/beats'>Beats</Link></li> */}
                         {/* <li><Link to='/store'>Merch</Link></li> */}

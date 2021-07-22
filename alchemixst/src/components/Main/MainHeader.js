@@ -31,7 +31,7 @@ function MainHeader({currTab}) {
                                 </div>
                                 <div className='freq freq8'>
                                 </div>
-                            </div> : <h2>Subtitle</h2>}
+                            </div> : <h2>Lo-Fi Earworms</h2>}
                 </div>
                 <img 
                 className={`${rotate && "rotate"}`} 

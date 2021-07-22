@@ -13,14 +13,14 @@ function MainAbout({currTab}) {
                 <div className={`main-header`}>
                     <div className='about-container'>
                     <h2>What's up?</h2>
-                    <p>I was born without rhythm. So I decided to sell my soul to the devil to get some. The end.</p>
+                    <p>Doughiest Beats this side of the GTA.</p>
                     </div>
                     <div className='socials'>
                 <h5>Socials:</h5>
                 <div>
-                <FontAwesomeIcon className='icon spotify' icon={faSpotify} 
-                onClick={() => window.open("http://www.spotify.com")}/>
-                <FontAwesomeIcon className='icon instagram' icon={faInstagram}/>
+                <FontAwesomeIcon className='icon spotify' icon={faSpotify}/>
+                <FontAwesomeIcon className='icon instagram' icon={faInstagram}
+                onClick={() => window.open("https://www.instagram.com/dough_joe_beats/")}/>
                 <FontAwesomeIcon className='icon soundcloud' icon={faSoundcloud}/>
                 </div>
             </div>
