@@ -5,13 +5,13 @@ import PadControls from './PadControls'
 function DrumPad() {
     const [isOn, setIsOn] = useState(false)
     const [volume, setVolume] = useState(100)
-    const [activePad, setActivePad] = useState(null)
+    const [activePadName, setActivePadName] = useState("")
     return (
     <div className='drumpad'>
         <h1 className='pad-header'>Make Some Noise</h1>
         <div className='pad-container'>
-            <PadDeck isOn={isOn} setActivePad={setActivePad} volume={volume}/>
-            <PadControls activePad={activePad} setIsOn={setIsOn} volume={volume} setVolume={setVolume}/>
+            <PadDeck isOn={isOn} setActivePadName={setActivePadName} volume={volume}/>
+            <PadControls isOn={isOn} activePadName={activePadName} setIsOn={setIsOn} volume={volume} setVolume={setVolume}/>
         </div>
     </div>
     )

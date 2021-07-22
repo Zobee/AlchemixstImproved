@@ -1,7 +1,7 @@
 import React from 'react'
 import Pad from './Pad'
 import padData from './padData'
-function PadDeck({isOn, setActivePad, volume}) {
+function PadDeck({isOn, setActivePadName, volume}) {
     return (
         <div className='pad-deck'>
             {padData.map(pad => <Pad 
@@ -9,7 +9,7 @@ function PadDeck({isOn, setActivePad, volume}) {
             key={pad.id} 
             pad={pad}
             volume={volume}
-            setActivePad={setActivePad}
+            setActivePadName={setActivePadName}
             />)}
         </div>
     )
