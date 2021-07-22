@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import PadDeck from './PadDeck'
 import PadControls from './PadControls'
-import PadHeader from './PadHeader'
-import PadBottom from './PadBottom'
 
 function DrumPad() {
     const [isOn, setIsOn] = useState(false)
@@ -10,12 +8,11 @@ function DrumPad() {
     const [activePad, setActivePad] = useState(null)
     return (
     <div className='drumpad'>
-        <PadHeader activePad={activePad}/>
+        <h1 className='pad-header'>Make Some Noise</h1>
         <div className='pad-container'>
             <PadDeck isOn={isOn} setActivePad={setActivePad} volume={volume}/>
             <PadControls activePad={activePad} setIsOn={setIsOn} volume={volume} setVolume={setVolume}/>
         </div>
-        <PadBottom activePad={activePad}/>
     </div>
     )
 }
