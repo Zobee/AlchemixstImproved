@@ -3,7 +3,7 @@ import PadDeck from './PadDeck'
 import PadControls from './PadControls'
 
 function DrumPad() {
-    const [isOn, setIsOn] = useState(false)
+    const [isOn, setIsOn] = useState(true)
     const [volume, setVolume] = useState(100)
     const [activePadName, setActivePadName] = useState("")
     return (

@@ -754,7 +754,7 @@ body{
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .pad-header{
     font-size: 0.5em
   }
@@ -770,8 +770,8 @@ body{
     padding: 0;
   }
   .pad {
-    height: 5vh;
-    width: 5vh;
+    height: 8vh;
+    width: 8vh;
     margin: 0;
     box-shadow: none;
   }
