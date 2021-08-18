@@ -171,6 +171,7 @@ body{
   align-items: center;
   background-color: #121318;
   margin-top: 0;
+  padding: 0;
   transform: translateY(-150%);
   transition: all 0.5s ease-in-out;
   opacity: 0;
@@ -183,9 +184,8 @@ body{
 
 .dropdown li{
   list-style: none;
-  text-align: center;
   font-size: 1rem;
-  margin: 4vh auto;
+  margin: 2rem;
 }
 
 .dropdown a{
