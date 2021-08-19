@@ -13,6 +13,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
             <input
                 type='checkbox'
                 name='power'
+                checked={isOn}
                 onChange={() => setIsOn(prev => !prev)}
             />
             <label htmlFor='mute'>

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 import MainBtn from './MainBtn'
 import MainHeader from './MainHeader'
-//import PanelContainer from './PanelContainer'
 import MainAbout from './MainAbout'
 
 function Main() {
@@ -16,7 +15,6 @@ function Main() {
                     <MainAbout currTab={currTab} />
                 </div>
             </div>
-            {/*<PanelContainer/>*/}
         </div>
     )
 }

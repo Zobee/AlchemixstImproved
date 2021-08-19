@@ -547,11 +547,11 @@ body{
 }
 
 .pad2{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(165, 27, 27);
 }
 
 .pad3{
-  background-color: rgb(199, 32, 32);
+  background-color: rgb(165, 27, 27);
 }
 
 .pad4{
@@ -579,11 +579,11 @@ body{
 }
 
 .pad10{
-  background-color: rgb(228, 213, 0);
+  background-color: rgb(187, 175, 3);
 }
 
 .pad11{
-  background-color: rgb(228, 213, 0);
+  background-color: rgb(187, 175, 3);
 }
 
 .pad12{
@@ -591,7 +591,7 @@ body{
 }
 
 .pad13{
-  background-color: rgb(17, 151, 175);
+  background-color: rgb(14, 125, 144);
 }
 
 .pad14{
@@ -603,7 +603,7 @@ body{
 }
 
 .pad16{
-  background-color: rgb(17, 151, 175);
+  background-color: rgb(14, 125, 144);
 }
 
 .pad.down{
@@ -619,6 +619,10 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pad-controls label {
+  margin: 0.5rem;
 }
 
 .pad-controls .beat-name{
@@ -737,11 +741,11 @@ body{
 
 @media screen and (max-width: 480px) {
   .pad-header{
-    font-size: 0.5em
+    display: none;
   }
   .pad-container{
     width: 100%;
-    margin: 0;
+    margin: 0.5rem 0;
     padding: 0;
   }
 
