@@ -4,7 +4,7 @@ import {faChevronCircleLeft, faChevronCircleRight} from '@fortawesome/free-solid
 
 function MainBtn({currTab, setCurrTab}) {
     return (
-        <button className='main-btn' onClick={() => {
+        <button aria-label='click to flip' className='main-btn' onClick={() => {
             setCurrTab(prev => prev === 'main' ? 'secondary' : "main")
         }}><FontAwesomeIcon icon={currTab==='main' ? faChevronCircleLeft : faChevronCircleRight}/>
         </button>

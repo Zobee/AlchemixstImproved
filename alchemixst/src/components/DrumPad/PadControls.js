@@ -7,7 +7,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 {activePadName && <h1>{activePadName}</h1>}
             </div>
             <h1>PAD CONTROLS</h1>
-            <label for='power'>
+            <label htmlFor='power'>
                 POWER
             </label>
             <input
@@ -15,7 +15,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 name='power'
                 onChange={() => setIsOn(prev => !prev)}
             />
-            <label for='mute'>
+            <label htmlFor='mute'>
                 MUTE
             </label>
             <input
@@ -24,7 +24,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 disabled={!isOn}
                 onChange={(e) => setVolume(e.target.checked ? 0 : 100)}
             />
-            <label for='sound-volume'>
+            <label htmlFor='sound-volume'>
                 Volume
             </label>
             <input

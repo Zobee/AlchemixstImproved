@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto");
-
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: sans-serif;
   background-color: darkgray;
   background-color: #222;
   color: #EEE;
@@ -256,7 +254,7 @@ body{
 .main-header h2{
   font-size: 4.5rem;
   letter-spacing: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: sans-serif;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -266,7 +264,6 @@ body{
 .main-header h1 span{
   font-size: 18rem;
   color: #42b625;
-  /*transform: skewX(-10deg);*/
 }
 
 .raise{
@@ -415,12 +412,6 @@ body{
   flex: 5;
   font-size: 5rem;
 }
-
-/* .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
-.panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
-.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-.panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-.panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); } */
 
 .panel-btn-container{
   display: flex;
@@ -683,16 +674,6 @@ body{
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  } 
-  to {
-    opacity: 0;
-    display: none;
   }
 }
 @keyframes pop {
