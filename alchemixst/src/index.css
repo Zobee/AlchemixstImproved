@@ -745,8 +745,10 @@ body{
   }
   .pad-container{
     width: 100%;
-    margin: 0.5rem 0;
+    max-height: 100%;
+    margin: 0;
     padding: 0;
+    flex-direction: column-reverse;
   }
 
   .pad-deck{
@@ -754,6 +756,7 @@ body{
     margin: 0;
     padding: 0;
   }
+
   .pad {
     height: 8vh;
     width: 8vh;

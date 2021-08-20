@@ -4,11 +4,12 @@ import {playSound} from '../../helpers'
 function Pad({isOn, pad, setActivePadName, volume}) {
     const {id, keyInput, beatName, sound} = pad;
     const [isDown, setIsDown] = useState("");
+    let playback;
 
-    const play = (aud) => {
+    const play = (playback) => {
         setIsDown("down")
         setActivePadName(beatName)
-        playSound(aud, volume)
+        playSound(playback, volume)
         setTimeout(() => {
             setIsDown("")
             setActivePadName("")
@@ -17,18 +18,20 @@ function Pad({isOn, pad, setActivePadName, volume}) {
 
     const keyPress = (e) => {
         if(isOn && e.key.toUpperCase() === keyInput){
-            play(sound)
+            play(playback)
         } 
     }
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
+        playback = new Audio(sound);
+        
     return () => {
         document.removeEventListener('keydown', keyPress)
     }
     },[keyPress])
     return (
-        <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`} onClick={() => isOn && play(sound)}>
+        <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`} onClick={() => isOn && play(playback)}>
             <p>{keyInput}</p>
             <p>{beatName}</p>
         </div>

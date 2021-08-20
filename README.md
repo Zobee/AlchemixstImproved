@@ -10,7 +10,7 @@ A 4x4 key-input based lo-fi drum pad powered by react. The impetus for the proje
 1. Fork this repository, then clone your fork of this repository. Change directory to '/alchemixst'.
 2. Install dependencies using the `npm install` command.
 3. Run the app using npm start.
-4. Go to <http://localhost:3080/> in your browser.
+4. Go to <http://localhost:3000/> in your browser.
 
 ## Dependencies
 
