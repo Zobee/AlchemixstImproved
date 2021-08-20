@@ -4,7 +4,7 @@ import {playSound} from '../../helpers'
 function Pad({isOn, pad, setActivePadName, volume}) {
     const {id, keyInput, beatName, sound} = pad;
     const [isDown, setIsDown] = useState("");
-    let playback;
+    const [playback] = useState(() => new Audio(sound))
 
     const play = (playback) => {
         setIsDown("down")
@@ -24,7 +24,6 @@ function Pad({isOn, pad, setActivePadName, volume}) {
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
-        playback = new Audio(sound);
         
     return () => {
         document.removeEventListener('keydown', keyPress)
