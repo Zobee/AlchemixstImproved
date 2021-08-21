@@ -16,5 +16,4 @@ export const playSound = (playback, volume) => {
   playback.currentTime = 0
   playback.volume = volume / 100
   playback.play();
-  playback.remove();
 }

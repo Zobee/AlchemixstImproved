@@ -1,10 +1,24 @@
 import React from 'react'
+import {useActivePadContext} from '../context/ActivePadContext'
 
-function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
+function PadControls() {
+    const {padControl, setPadControl} = useActivePadContext()
+    const {isOn, volume} = padControl;
+
+    const handleMute = e => {
+        const mute = e.target.checked ? 0 : 100
+        setPadControl(prev => ({...prev, volume: mute}))
+    }
+
+    const handleVolume = e => {
+        const volume = e.target.value
+        setPadControl(prev => ({...prev, volume}))
+    }
+
     return (
         <div className='pad-controls'>
             <div className={`beat-name ${isOn ? "beat-name-active" : ""}`}>
-                {activePadName && <h1>{activePadName}</h1>}
+                {padControl && <h1>{padControl.beatName}</h1>}
             </div>
             <h1>PAD CONTROLS</h1>
             <label htmlFor='power'>
@@ -13,8 +27,8 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
             <input
                 type='checkbox'
                 name='power'
-                checked={isOn}
-                onChange={() => setIsOn(prev => !prev)}
+                checked={() => setPadControl(prev => ({...prev, isOn: true}))}
+                onChange={() => setPadControl(prev => ({...prev, isOn: !prev.isOn}))}
             />
             <label htmlFor='mute'>
                 MUTE
@@ -23,7 +37,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 type='checkbox'
                 name='mute'
                 disabled={!isOn}
-                onChange={(e) => setVolume(e.target.checked ? 0 : 100)}
+                onChange={handleMute}
             />
             <label htmlFor='sound-volume'>
                 Volume
@@ -35,7 +49,7 @@ function PadControls({activePadName, isOn, setIsOn, volume, setVolume}) {
                 max="100"
                 value={volume}
                 disabled={!isOn}
-                onChange={(e) => setVolume(e.target.value)}
+                onChange={handleVolume}
                 />
             <p className='volume-display'>{volume}</p>
         </div>   

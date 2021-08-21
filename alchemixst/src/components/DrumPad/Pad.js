@@ -1,18 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import {playSound} from '../../helpers'
-
-function Pad({isOn, pad, setActivePadName, volume}) {
-    const {id, keyInput, beatName, sound} = pad;
+import {useActivePadContext} from '../context/ActivePadContext'
+function Pad({pad, playback}) {
+    const {padControl, setPadControl} = useActivePadContext()
+    const {isOn, volume} = padControl;
+    const {id, keyInput, beatName} = pad;
     const [isDown, setIsDown] = useState("");
-    const [playback] = useState(() => new Audio(sound))
-
     const play = (playback) => {
         setIsDown("down")
-        setActivePadName(beatName)
+        setPadControl(prev => ({ ...prev, beatName}));
         playSound(playback, volume)
         setTimeout(() => {
             setIsDown("")
-            setActivePadName("")
+            setPadControl(prev => ({ ...prev, beatName: ""}))
         }, 300)
     }    
 
