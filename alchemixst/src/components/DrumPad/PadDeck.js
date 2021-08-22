@@ -5,7 +5,6 @@ function PadDeck({isOn, volume}) {
     return (
         <div className='pad-deck'>
             {padData.map(pad => {
-                console.log("loading........")
             const playback = new Audio(pad.sound)
             return <Pad 
             isOn={isOn} 
