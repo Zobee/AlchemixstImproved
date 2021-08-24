@@ -739,6 +739,20 @@ body{
 
 }
 
+.autodrum-btn{
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  color: #FFF;
+  background-color: #444;
+  transition: all 0.5s ease;
+}
+
+.autodrum-btn:hover, .autodrum-btn:focus{
+  background-color: #666;
+}
+
 @media screen and (max-width: 480px) {
   .pad-header{
     display: none;

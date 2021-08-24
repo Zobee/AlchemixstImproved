@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {playSound} from '../../helpers'
 import {useActivePadContext} from '../context/ActivePadContext'
-function Pad({pad, playback}) {
+function Pad({pad, playback, trigger}) {
     const {padControl, setPadControl} = useActivePadContext()
     const {isOn, volume} = padControl;
     const {id, keyInput, beatName} = pad;
@@ -21,6 +21,10 @@ function Pad({pad, playback}) {
             play(playback)
         } 
     }
+
+    useEffect(() => {
+        if(trigger === keyInput) play(playback)
+    },[trigger])
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
