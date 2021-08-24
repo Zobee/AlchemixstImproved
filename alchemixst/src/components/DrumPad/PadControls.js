@@ -27,7 +27,7 @@ function PadControls() {
             <input
                 type='checkbox'
                 name='power'
-                checked={() => setPadControl(prev => ({...prev, isOn: true}))}
+                checked={isOn}
                 onChange={() => setPadControl(prev => ({...prev, isOn: !prev.isOn}))}
             />
             <label htmlFor='mute'>

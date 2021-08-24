@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import PadDeck from './PadDeck'
 import PadControls from './PadControls'
 import {ActivePadProvider} from '../context/ActivePadContext'
