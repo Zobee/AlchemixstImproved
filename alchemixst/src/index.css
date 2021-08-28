@@ -787,3 +787,44 @@ body{
     font-size: 0.3em;
   }
 }
+
+/*Player*/
+.player-container {
+  display: flex;
+  justify-content: space-between;
+  height: 35vh;
+}
+
+.currently-playing {
+  width: 60%;
+  border: solid 1px gold;
+}
+
+.track-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.track-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.track {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.track:hover {
+  background-color: #555;
+  font-weight: 700;
+}
+
+.track p {
+  flex: 1;
+  margin: 1rem;
+}

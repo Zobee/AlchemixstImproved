@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import MainBtn from './MainBtn'
 import MainHeader from './MainHeader'
 import MainAbout from './MainAbout'
+import PlayerContainer from '../MediaPlayer/PlayerContainer'
 
 function Main() {
     const [currTab, setCurrTab] = useState("main")
@@ -15,6 +16,7 @@ function Main() {
                     <MainAbout currTab={currTab} />
                 </div>
             </div>
+        <PlayerContainer />
         </div>
     )
 }
