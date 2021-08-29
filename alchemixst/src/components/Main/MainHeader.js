@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {CSSTransition} from 'react-transition-group'
+import {useTrackContext} from "../context/TrackContext"
 
 function MainHeader({currTab}) {
-    const [rotate, setRotate] = useState(false)
-    const [raise, setRaise] = useState("")
+    const {trackControl} = useTrackContext() 
+    const {playing, trackID} = trackControl;
     return (
         <CSSTransition
                 in={currTab === 'main'}
@@ -12,33 +13,29 @@ function MainHeader({currTab}) {
                 classNames='test'>
                 <div className={`main-header`}>
                 <div className={`header-brand`}>
-                    <h1 className={raise}><span>D</span>OUGH<span>J</span>OE</h1>
-                    {raise ? 
+                    <h1 className={playing ? 'raise' : ''}><span>D</span>OUGH<span>J</span>OE</h1>
+                    {playing ? 
                     <div className={`freq-container raise fade`}>
-                                <div className='freq freq1'>
-                                </div>
-                                <div className='freq freq2'>
-                                </div>
-                                <div className='freq freq3'>
-                                </div>
-                                <div className='freq freq4'>
-                                </div>
-                                <div className='freq freq5'>
-                                </div>
-                                <div className='freq freq6'>
-                                </div>
-                                <div className='freq freq7'>
-                                </div>
-                                <div className='freq freq8'>
-                                </div>
-                            </div> : <h2>Lo-Fi Earworms</h2>}
+                            <div className='freq freq1'>
+                            </div>
+                            <div className='freq freq2'>
+                            </div>
+                            <div className='freq freq3'>
+                            </div>
+                            <div className='freq freq4'>
+                            </div>
+                            <div className='freq freq5'>
+                            </div>
+                            <div className='freq freq6'>
+                            </div>
+                            <div className='freq freq7'>
+                            </div>
+                            <div className='freq freq8'>
+                            </div>
+                    </div> : <h2>Lo-Fi Earworms</h2>}
                 </div>
                 <img 
-                className={`${rotate && "rotate"}`} 
-                onClick={() => {
-                    setRotate(prev => !prev)
-                    setRaise(prev => prev ? "" : "raise")
-                }}
+                className={`${playing && "rotate"}`}
                 src={'profile.jpg'} 
                 alt='My Mug'/>
                 </div>

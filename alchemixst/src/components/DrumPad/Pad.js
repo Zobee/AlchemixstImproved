@@ -28,10 +28,7 @@ function Pad({pad, playback, trigger}) {
 
     useEffect(() => {
         document.addEventListener('keydown', keyPress)
-        
-    return () => {
-        document.removeEventListener('keydown', keyPress)
-    }
+        return () => document.removeEventListener('keydown', keyPress)
     },[keyPress])
     return (
         <div className={`pad ${isOn ? `pad${id}` : 'off'} ${isDown}`} onClick={() => isOn && play(playback)}>

@@ -12,8 +12,13 @@ export const getRandomColor = () => {
   }
 }
 
-export const playSound = (playback, volume) => {
+export const playSound = (playback, volume=100) => {
   playback.currentTime = 0
   playback.volume = volume / 100
   playback.play();
+  playback.remove()
+}
+
+export const endPlay = (playback) => {
+  playback.currentTime = playback.duration
 }
