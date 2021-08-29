@@ -789,21 +789,19 @@ body{
 }
 
 /*Player*/
+
 .player-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 35vh;
-}
-
-.currently-playing {
-  width: 60%;
-  border: solid 1px gold;
+  position: relative;
+  padding-top: 0.5rem;
 }
 
 .track-container {
   display: flex;
+  width: 98%;
   flex-direction: column;
-  width: 40%;
   cursor: pointer;
   overflow-y: auto;
 }
@@ -815,7 +813,7 @@ body{
 
 .track {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -825,6 +823,5 @@ body{
 }
 
 .track p {
-  flex: 1;
-  margin: 1rem;
+  margin: 1.5rem 2.5rem;
 }
