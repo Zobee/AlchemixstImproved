@@ -817,6 +817,10 @@ body{
   width: 100%;
 }
 
+.track.active {
+  font-weight: 700;
+}
+
 .track:hover {
   background-color: #555;
   font-weight: 700;

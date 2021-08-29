@@ -31,10 +31,14 @@ const Track = ({id, name, duration, song}) => {
   useEffect(() => {
     document.addEventListener('ended', trackEnd)
     return () => document.removeEventListener('ended', trackEnd)
-  })
-    
+  },[])
+  
+  useEffect(() => {
+    if(trackID !== id) endPlay(song)
+  },[trackID])
+
   return (
-    <div className='track' 
+    <div className={`track ${id === trackID ? "active" : ""}`} 
     onMouseEnter={() => setHover(prev => !prev)} 
     onMouseLeave={() => setHover(prev => !prev)}
     onClick={() => playTrack(playing, id)}>
