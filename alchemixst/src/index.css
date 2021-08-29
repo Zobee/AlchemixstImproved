@@ -252,13 +252,13 @@ body{
 }
 
 .main-header h2{
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.5rem;
   font-family: sans-serif;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
-  margin: 0;
+  margin-top: 0.5rem;
 }
 
 .main-header h1 span{
@@ -735,6 +735,10 @@ body{
 
   .pad-container {
     flex-direction: column;
+  }
+
+  .raise {
+    transform: translateY(-100%);
   }
 
 }

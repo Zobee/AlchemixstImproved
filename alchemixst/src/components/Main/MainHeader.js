@@ -4,18 +4,18 @@ import {useTrackContext} from "../context/TrackContext"
 
 function MainHeader({currTab}) {
     const {trackControl} = useTrackContext() 
-    const {playing, trackID} = trackControl;
+    const {playing} = trackControl;
     return (
         <CSSTransition
                 in={currTab === 'main'}
                 unmountOnExit
                 timeout={500}
                 classNames='test'>
-                <div className={`main-header`}>
-                <div className={`header-brand`}>
+                <div className='main-header'>
+                <div>
                     <h1 className={playing ? 'raise' : ''}><span>D</span>OUGH<span>J</span>OE</h1>
                     {playing ? 
-                    <div className={`freq-container raise fade`}>
+                    <div className={`freq-container fade`}>
                             <div className='freq freq1'>
                             </div>
                             <div className='freq freq2'>

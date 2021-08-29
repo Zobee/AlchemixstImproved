@@ -20,5 +20,6 @@ export const playSound = (playback, volume=100) => {
 }
 
 export const endPlay = (playback) => {
-  playback.currentTime = playback.duration
+  playback.pause()
+  playback.remove()
 }
