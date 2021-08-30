@@ -4,7 +4,8 @@ import Main from './components/Main/Main'
 import Header from './components/Header/Header'
 import DrumPad from './components/DrumPad/DrumPad'
 import Shutters from './components/Shutters'
-
+import initReactFastclick from 'react-fastclick';
+initReactFastclick();
 
 const App = () => {
   const [animationEnd, setAnimationEnd] = useState(false)
